@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag bronwyn-sweeney:$(date +%s)
+      
+    - name: Build and publish Docker Image to GitHub Container Registry
+    - uses: TCPShield/gp-docker-action@1.1.13
+      with:
+        # Github username to push Docker image from
+        github-username: AlexanderMohan
+        # GitHub token to push Docker image to GitHub Container Registry
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        # Docker Image tag
+        image-tag: latest
