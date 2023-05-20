@@ -84,3 +84,5 @@ gem "simple_form-tailwind", "~> 0.1.1"
 gem "htmlbeautifier", "~> 1.4"
 
 gem "devise-tailwindcssed", "~> 0.1.5"
+
+gem "motor-admin", "~> 0.4.17"

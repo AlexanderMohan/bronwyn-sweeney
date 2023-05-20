@@ -1,0 +1,34 @@
+---
+engine_version: 0.4.17
+file_version: 2023-05-20 13:01:34.771328000 +01:00
+resources:
+- name: content_block
+  preferences:
+    columns:
+    - column_type: richtext
+      name: body
+  updated_at: 2023-05-20 13:01:34.771328000 +00:00
+configs:
+- key: header.links
+  value:
+  - name: Reports
+    link_type: reports
+  - name: Forms
+    link_type: forms
+  - conditions: []
+    type: header
+    name: Back
+    path: "/index"
+    link_type: header
+  updated_at: 2023-05-20 12:50:05.547224000 +00:00
+queries: []
+dashboards: []
+forms: []
+alerts: []
+api_configs:
+- id: 1
+  name: origin
+  url: "/"
+  preferences: {}
+  description:
+  updated_at: 2023-05-20 12:30:02.021155000 +00:00

@@ -9,5 +9,10 @@
     <a class="hover:text-orange-500 duration-300" href="/events">See Me</a>
     <a class="hover:text-orange-500 duration-300" href="/about">About</a>
     <a class="hover:text-orange-500 duration-300" href="/contact">Contact</a>
+    <% #If signed in, show sign out and admin links %>
+    <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, class: "hover:text-orange-500 duration-300", :method => :delete, data: { turbo_method: "delete"} %>
+      <a class="hover:text-orange-500 duration-300" href="/admin">Admin</a>
+    <% end %>
   </div>
 </nav>
