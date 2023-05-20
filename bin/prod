@@ -24,4 +24,8 @@ RAILS_ENV=production bundle exec rake db:create
 echo "Checking and running migrations..."
 RAILS_ENV=production bundle exec rake db:migrate
 
+bundle exec rake assets:clobber
+bundle exec rake assets:clean
+bundle exec rake assets:precompile
+
 exec foreman start -f Procfile "$@"
