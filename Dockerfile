@@ -6,4 +6,5 @@ ADD . /app
 RUN bundle
 RUN npm i -g yarn && yarn install
 RUN rake assets:precompile
+EXPOSE 3000
 ENTRYPOINT ["bin/prod"]
