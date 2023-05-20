@@ -3,6 +3,11 @@ services:
     image: ghcr.io/alexandermohan/bronwyn-sweeney:latest
     ports:
       - 3000:3000
+    environment:
+      - "RAILS_MASTER_KEY=YOUR_MASTER_KEY" # Replace with your master key
     volumes:
-      - ./persist:/app/persist
-      - ./master.key:/app/config/master.key
+      - persist:/app/persist
+  #   - ./master.key:/app/config/master.key # Uncomment if you want to use a local master key  
+volumes:
+  persist:
+    driver: local
