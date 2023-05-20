@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+export RAILS_ENV=production
+export RAILS_SERVE_STATIC_FILES=true
+
 if ! gem list foreman -i --silent; then
   echo "Installing foreman..."
   gem install foreman
@@ -19,10 +22,10 @@ echo "manager."
 echo ""
 
 echo "Creating database if it doesn't exist..."
-RAILS_ENV=production bundle exec rake db:create
+bundle exec rake db:create
 
 echo "Checking and running migrations..."
-RAILS_ENV=production bundle exec rake db:migrate
+bundle exec rake db:migrate
 
 bundle exec rake assets:clobber
 bundle exec rake assets:clean

@@ -44,3 +44,7 @@
 
 # Ignore .DS_store files and other mac specific files
 .DS_Store
+
+# Ignore the docker persist directory except for the .keep file
+/persist/*
+!/persist/.keep
