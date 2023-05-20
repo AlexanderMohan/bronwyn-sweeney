@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'public#index'
+  get 'about', to: 'public#about'
 end

@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+if ! gem list foreman -i --silent; then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+echo ""
+echo "Starting bronwyn-sweeney in production mode..."
+echo "(c) alexanderMOHAN (CHABGO Ltd.)"
+echo ""
+echo "You should make sure that you persist the /app/persist directory."
+echo "A master key environment variable should also be set."
+echo ""
+echo "If you are not a staff member of alexanderMOHAN, "
+echo "you should create your own master key and setup credentials as "
+echo "specified in config/credentials.yml.dist using the Rails credentials" 
+echo "manager."
+echo ""
+
+echo "Creating database if it doesn't exist..."
+RAILS_ENV=production bundle exec rake db:create
+
+echo "Checking and running migrations..."
+RAILS_ENV=production bundle exec rake db:migrate
+
+exec foreman start -f Procfile "$@"
