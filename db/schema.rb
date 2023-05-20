@@ -10,13 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_20_122953) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_20_143039) do
   create_table "content_blocks", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.string "alias"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "cta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_url"
+    t.string "cta_label"
   end
 
   create_table "motor_alert_locks", force: :cascade do |t|

@@ -1,0 +1,5 @@
+<%= render "shared/generic_card", content_alias: 'event-header', header_image: nil %>
+<% # For each event (as defined by the future_events helper method), render the event partial %>
+<% future_events.each do |event| %>
+  <%= render partial: "shared/event", locals: { event: event } %>
+<% end %>

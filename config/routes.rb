@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   root 'public#index'
   get 'about', to: 'public#about'
   get 'index', to: 'public#index'
+  get 'contact', to: 'public#contact'
+  get 'events', to: 'public#events'
 end

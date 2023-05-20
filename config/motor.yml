@@ -1,13 +1,40 @@
 ---
 engine_version: 0.4.17
-file_version: 2023-05-20 13:01:34.771328000 +01:00
+file_version: 2023-05-20 15:11:22.044776000 +01:00
 resources:
 - name: content_block
   preferences:
     columns:
     - column_type: richtext
+      description: The text shown within the content card.
       name: body
-  updated_at: 2023-05-20 13:01:34.771328000 +00:00
+    - description: This determines where the item will appear. Please don't change
+        this unless you know what you're doing.
+      name: alias
+    - description: The title shown for the content card.
+      name: title
+    icon: align-justified
+  updated_at: 2023-05-20 15:10:39.547286000 +00:00
+- name: event
+  preferences:
+    columns:
+    - display_name: Call-to-action link
+      column_type: link
+      name: cta
+    - column_type: textarea
+      name: description
+    - access_type: hidden
+      name: id
+    - display_name: Call-to-action label
+      name: cta_label
+    icon: calendar-event
+    display_column: start_date
+    searchable_columns:
+    - id
+    - image_url
+    - title
+    - description
+  updated_at: 2023-05-20 15:11:22.044776000 +00:00
 configs:
 - key: header.links
   value:
@@ -21,6 +48,28 @@ configs:
     path: "/index"
     link_type: header
   updated_at: 2023-05-20 12:50:05.547224000 +00:00
+- key: resources.content_block.columns.order
+  value:
+  - alias
+  - title
+  - body
+  - updated_at
+  - created_at
+  - id
+  updated_at: 2023-05-20 14:59:48.257372000 +00:00
+- key: resources.event.columns.order
+  value:
+  - id
+  - title
+  - description
+  - start_date
+  - end_date
+  - cta
+  - cta_label
+  - image_url
+  - updated_at
+  - created_at
+  updated_at: 2023-05-20 15:07:07.466467000 +00:00
 queries: []
 dashboards: []
 forms: []
