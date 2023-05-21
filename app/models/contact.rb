@@ -1,13 +1,13 @@
 # == Schema Information
 #
-# Table name: content_blocks
+# Table name: contacts
 #
 #  id         :integer          not null, primary key
-#  alias      :string
-#  body       :text
-#  title      :string
+#  email      :string
+#  message    :text
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class ContentBlock < ApplicationRecord
+class Contact < ApplicationRecord
 end

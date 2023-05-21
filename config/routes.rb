@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts, path: 'contact', only: [:new, :create]
   authenticate :user do
     mount Motor::Admin => '/admin'
   end
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   root 'public#index'
   get 'about', to: 'public#about'
   get 'index', to: 'public#index'
-  get 'contact', to: 'public#contact'
   get 'events', to: 'public#events'
+
+  # Define the contact route
+  get 'contact', to: 'contacts#new', as: 'contact'
 end
