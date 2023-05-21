@@ -9,4 +9,6 @@
 #  updated_at  :datetime         not null
 #
 class Role < ApplicationRecord
+    # Validate the presence of the name
+    validates_presence_of :name
 end

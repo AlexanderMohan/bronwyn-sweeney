@@ -10,4 +10,6 @@
 #  updated_at :datetime         not null
 #
 class ContentBlock < ApplicationRecord
+    # Validate the presence of the title and body
+    validates_presence_of :title, :body
 end
