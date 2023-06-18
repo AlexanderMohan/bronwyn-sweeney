@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'index', to: 'public#index'
   get 'events', to: 'public#events'
 
-  # Define the contact route
+  # Define the contact route with success page
   get 'contact', to: 'contacts#new', as: 'contact'
+  get 'contact/success', to: 'contacts#success', as: 'contact_success'
 end

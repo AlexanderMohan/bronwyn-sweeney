@@ -18,6 +18,21 @@ module PublicHelper
     block.title
   end
 
+  def content_block_cta_label(id)
+    block = ContentBlock.find_by alias: id
+    return if block.nil? 
+    return 'Click here' if block.cta_label.nil?
+
+    block.cta_label
+  end
+
+  def content_block_cta_link(id)
+    block = ContentBlock.find_by alias: id
+    return if block.nil?
+
+    block.cta_link
+  end
+
   def find_event(id)
     event = Event.find_by(id:)
     return if event.nil?

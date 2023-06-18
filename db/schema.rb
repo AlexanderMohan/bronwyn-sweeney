@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_21_173029) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_18_155552) do
   create_table "contacts", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -25,6 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_21_173029) do
     t.string "alias", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cta_label"
+    t.string "cta_link"
   end
 
   create_table "events", force: :cascade do |t|

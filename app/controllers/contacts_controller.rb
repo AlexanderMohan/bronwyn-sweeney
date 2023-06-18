@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ContactsController < ApplicationController
-  before_action :set_contact, only: %i[ show edit update destroy ]
+  before_action :set_contact, only: %i[show edit update destroy]
 
   # GET /contacts or /contacts.json
   def index
@@ -7,8 +9,7 @@ class ContactsController < ApplicationController
   end
 
   # GET /contacts/1 or /contacts/1.json
-  def show
-  end
+  def show; end
 
   # GET /contacts/new
   def new
@@ -16,8 +17,7 @@ class ContactsController < ApplicationController
   end
 
   # GET /contacts/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /contacts or /contacts.json
   def create
@@ -25,21 +25,24 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to contact_url(@contact), notice: 'Contact was successfully created.' }
+        format.html { redirect_to contact_success_url, notice: 'Your message was sent successfully.' }
         format.json { render :show, status: :created, location: @contact }
+        helpers.email_notification_override_reply_to("Contact form submitted by: #{@contact.name}",
+          "The message entered by the user follows:<br/>#{@contact.message}<br/>
+          You can reply to this email as normal and all replies will be sent to the user(#{@contact.email})", 
+          @contact.email, @contact.name)
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
-    helpers.email_notification(subject: 'Contact form submitted by: ' + @contact.name, body: 'The message entered by the user follows:<br/>'+@contact.message, reply_to: @contact.email)
   end
 
   # PATCH/PUT /contacts/1 or /contacts/1.json
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to contact_url(@contact), notice: 'Contact was successfully updated.' }
+        format.html { redirect_to contact_success_url, notice: 'Contact was successfully updated.' }
         format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,14 +61,17 @@ class ContactsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_contact
-      @contact = Contact.find(params[:id])
-    end
+  def success; end
 
-    # Only allow a list of trusted parameters through.
-    def contact_params
-      params.require(:contact).permit(:name, :email, :message)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_contact
+    @contact = Contact.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def contact_params
+    params.require(:contact).permit(:name, :email, :message)
+  end
 end
