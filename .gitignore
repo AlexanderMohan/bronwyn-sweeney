@@ -48,3 +48,4 @@
 # Ignore the docker persist directory except for the .keep file
 /persist/*
 !/persist/.keep
+.env

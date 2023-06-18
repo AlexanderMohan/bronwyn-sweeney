@@ -6,10 +6,10 @@
 #  cta         :string
 #  cta_label   :string
 #  description :text
-#  end_date    :date
+#  end_date    :date             not null
 #  image_url   :string
-#  start_date  :date
-#  title       :string
+#  start_date  :date             not null
+#  title       :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

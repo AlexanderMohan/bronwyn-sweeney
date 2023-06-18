@@ -1,15 +1,19 @@
 module.exports = {
-    content: [
-      './app/helpers/**/*.rb',
-      './app/javascript/**/*.js',
-      './app/views/**/*',
-    ],
-    theme: {
-      extend: {
-        backgroundImage: {
-          'bronwyn-headshot': "url('/images/bronwyn-headshot.jpg')",
-        }
-      },
+  content: [
+    './app/views/**/*.html.erb',
+    './app/helpers/**/*.rb',
+    './app/assets/stylesheets/**/*.css',
+    './app/javascript/**/*.js',
+    './node_modules/flowbite/**/*.js'
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        'bronwyn-headshot': "url('/images/bronwyn-headshot.jpg')",
+      }
     },
-    plugins: [],
-  }
+  },
+  plugins: [
+    require('flowbite/plugin')
+  ]
+}

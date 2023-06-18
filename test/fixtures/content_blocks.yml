@@ -3,19 +3,19 @@
 # Table name: content_blocks
 #
 #  id         :integer          not null, primary key
-#  alias      :string
-#  body       :text
-#  title      :string
+#  alias      :string           not null
+#  body       :text             not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 one:
-  title: MyString
-  body: MyText
-  alias: MyString
+  title: MyString1
+  body: MyText1
+  alias: MyString1
 
 two:
-  title: MyString
-  body: MyText
-  alias: MyString
+  title: MyString2
+  body: MyText2
+  alias: MyString2

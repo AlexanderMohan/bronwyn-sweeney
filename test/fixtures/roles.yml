@@ -4,15 +4,15 @@
 #
 #  id          :integer          not null, primary key
 #  description :string
-#  name        :string
+#  name        :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
 one:
-  name: MyString
+  name: Default
   description: MyString
 
 two:
-  name: MyString
+  name: Administrator
   description: MyString

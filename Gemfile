@@ -83,7 +83,7 @@ end
 gem 'devise', '~> 4.9'
 gem 'simple_form', '~> 5.2'
 
-gem 'tailwindcss-rails', '~> 2.0'
+gem 'tailwindcss-rails'
 
 gem 'simple_form-tailwind', '~> 0.1.1'
 
@@ -92,3 +92,9 @@ gem 'htmlbeautifier', '~> 1.4'
 gem 'devise-tailwindcssed', '~> 0.1.5'
 
 gem 'motor-admin', '~> 0.4.17'
+
+gem "database_consistency", "~> 1.7", :group => :development
+
+gem "database_validations", "~> 1.1"
+
+gem "mailersend-ruby", "~> 1.5"

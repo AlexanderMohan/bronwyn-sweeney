@@ -3,9 +3,9 @@
 # Table name: contacts
 #
 #  id         :integer          not null, primary key
-#  email      :string
-#  message    :text
-#  name       :string
+#  email      :string           not null
+#  message    :text             not null
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
