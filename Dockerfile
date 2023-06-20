@@ -10,6 +10,4 @@ RUN rake assets:precompile
 RUN rm -rf .env
 EXPOSE 3000
 ENTRYPOINT ["bin/prod"]
-LABEL org.opencontainers.image.description "Web app for Bronwyn Sweeney with editable content blocks and smart features" \
-      org.opencontainers.image.authors="AlexanderMohan" \
-        org.opencontainers.image.url="https://github.com/AlexanderMohan/bronwyn-sweeney/"
+LABEL org.opencontainers.image.description "Web app for Bronwyn Sweeney with editable content blocks and smart features"
