@@ -1,4 +1,4 @@
-<div class="max-w-2xl p-6 rounded-lg shadow bg-neutral-800 border-neutral-700 mb-9">
+<div class="max-w-2xl md:p-6 p-4 rounded-lg shadow bg-orange-950 md:mb-7 mb-4 bg-opacity-70">
   <h5 class="mb-2 text-2xl font-bold tracking-tight text-white"><%= content_block_title(content_alias, false)%></h5>
   <p class="mb-3 font-normal text-neutral-200">
     <%= unless header_image.nil? then image_tag header_image, class: "w-48" end %>
@@ -9,4 +9,5 @@
         <%= content_block_cta_label(content_alias) %>
       <% end %>
     <% end %>
+    <%=if show_socials then render 'shared/socials' end%>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_18_155552) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_153222) do
   create_table "contacts", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -237,6 +237,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_155552) do
   create_table "roles", force: :cascade do |t|
     t.string "name", null: false
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "social_links", force: :cascade do |t|
+    t.string "svg"
+    t.string "backgroundColour"
+    t.string "platformName"
+    t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

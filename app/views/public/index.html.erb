@@ -2,7 +2,9 @@
 <% # Set Page Title %>
 <% content_for :title do %>Home<% end %>
 <% # Set Page Content %>
-<%= render "shared/generic_card", content_alias: 'homepage', header_image: 'funny_women_awards.png' %>
+
+<%= render "shared/generic_card", content_alias: 'homepage', header_image: 'funny_women_awards.png', show_socials:true %>
 <% unless next_event.nil? %>
   <%= render "shared/event", event: next_event %>
 <% end %>
+

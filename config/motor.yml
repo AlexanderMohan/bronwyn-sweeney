@@ -1,6 +1,6 @@
 ---
 engine_version: 0.4.17
-file_version: 2023-05-20 15:11:22.044776000 +01:00
+file_version: 2023-06-26 15:54:14.107426000 +01:00
 resources:
 - name: content_block
   preferences:
@@ -35,6 +35,24 @@ resources:
     - title
     - description
   updated_at: 2023-05-20 15:11:22.044776000 +00:00
+- name: social_link
+  preferences:
+    columns:
+    - display_name: Background Colour
+      name: backgroundColour
+    - display_name: Platform Name
+      name: platformName
+    - display_name: SVG Icon
+      column_type: textarea
+      validators:
+      - format: "<\\/?[\\w\\s]*>|<.+[\\W]>"
+        message: Please include SVG tag
+      name: svg
+    - validators:
+      - format: https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)
+        message: Please enter a url beginning with https
+      name: link
+  updated_at: 2023-06-26 15:54:14.107426000 +00:00
 configs:
 - key: header.links
   value:
@@ -70,6 +88,16 @@ configs:
   - updated_at
   - created_at
   updated_at: 2023-05-20 15:07:07.466467000 +00:00
+- key: resources.social_link.columns.order
+  value:
+  - id
+  - platformName
+  - link
+  - svg
+  - backgroundColour
+  - updated_at
+  - created_at
+  updated_at: 2023-06-26 15:35:58.319012000 +00:00
 queries: []
 dashboards: []
 forms: []

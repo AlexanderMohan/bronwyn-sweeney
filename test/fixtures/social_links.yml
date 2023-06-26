@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: social_links
+#
+#  id               :integer          not null, primary key
+#  backgroundColour :string
+#  link             :string
+#  platformName     :string
+#  svg              :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
+one:
+  svg: MyString
+  backgroundColour: MyString
+  platformName: MyString
+  link: MyString
+
+two:
+  svg: MyString
+  backgroundColour: MyString
+  platformName: MyString
+  link: MyString
