@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import FormRedirectController from "./form_redirect_controller"
+application.register("form-redirect", FormRedirectController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
