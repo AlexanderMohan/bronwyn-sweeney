@@ -223,6 +223,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    recaptcha (5.14.0)
     regexp_parser (2.8.0)
     reline (0.3.3)
       io-console (~> 0.5)
@@ -306,6 +307,7 @@ DEPENDENCIES
   motor-admin (~> 0.4.17)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  recaptcha (~> 5.14)
   selenium-webdriver
   simple_form (~> 5.2)
   simple_form-tailwind (~> 0.1.1)

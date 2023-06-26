@@ -98,3 +98,5 @@ gem "database_consistency", "~> 1.7", :group => :development
 gem "database_validations", "~> 1.1"
 
 gem "mailersend-ruby", "~> 1.5"
+
+gem "recaptcha", "~> 5.14"

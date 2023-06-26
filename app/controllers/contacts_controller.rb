@@ -23,8 +23,10 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
+    check = verify_recaptcha action: 'contact', minimum_score: 0.7, secret_key: Rails.application.credentials.recaptcha_v3[:secret_key]
+
     respond_to do |format|
-      if @contact.save
+      if check && @contact.save
         format.html { redirect_to contact_success_url, notice: 'Your message was sent successfully.' }
         format.json { render :show, status: :created, location: @contact }
         helpers.email_notification_override_reply_to("Contact form submitted by: #{@contact.name}",
