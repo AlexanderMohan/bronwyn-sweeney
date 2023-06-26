@@ -7,6 +7,6 @@ Recaptcha.configure do |config|
   
     # Uncomment the following lines if you are using the Enterprise API:
     # config.enterprise = true
-    # config.enterprise_api_key = 'AIzvFyE3TU-g4K_Kozr9F1smEzZSGBVOfLKyupA'
+    # config.enterprise_api_key = <key>
     # config.enterprise_project_id = 'my-project'
   end
