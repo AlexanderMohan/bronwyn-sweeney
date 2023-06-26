@@ -162,7 +162,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    mailersend-ruby (1.5.1)
+    mailersend-ruby (1.6.0)
       dotenv (~> 2.7)
       http (~> 5.0)
       json (~> 2.5)
@@ -190,6 +190,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.14.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.23.0)
@@ -275,9 +277,12 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.2-x86_64-darwin)
+    sqlite3 (1.6.2-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.29-x86_64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.29-x86_64-linux)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.2)
@@ -313,6 +318,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   annotate
@@ -328,7 +334,7 @@ DEPENDENCIES
   htmlbeautifier (~> 1.4)
   jbuilder
   jsbundling-rails
-  mailersend-ruby (~> 1.5)
+  mailersend-ruby (~> 1.6)
   motor-admin (~> 0.4.17)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
