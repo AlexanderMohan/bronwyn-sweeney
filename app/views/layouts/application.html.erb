@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-  <body class="bg-orange-600 min-h-screen bg-left-bottom bg-cover" data-controller="navigation">
+  <body class="bg-orange-600 bg-left-bottom bg-cover" data-controller="navigation">
     <!-- render navigation partial -->
     <%= render partial: "shared/navigation" %>
     <div id="wrapper" class="overflow-hidden flex flex-col md:p-12 p-6 min-h-screen">
@@ -27,7 +27,7 @@
           </svg>
         </a>
       </header>
-      <main class="overflow-y-scroll flex flex-col flex-grow h-full items-end z-10 flex-1">
+      <main class="overflow-y-scroll flex flex-col flex-grow items-end z-10 flex-1">
         <%= yield %>
       </main>
       <div class="fixed z-0 w-96 lg:w-2/6 bottom-0">
