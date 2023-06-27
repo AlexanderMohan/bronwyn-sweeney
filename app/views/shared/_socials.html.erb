@@ -1,4 +1,4 @@
-<p class="w-fit grid grid-flow-col gap-2">
+<p class="w-fit grid grid-flow-col gap-2 sm:grid-rows-1 grid-rows-2">
   <% for i in SocialLink.all do %>
     <a href=<%= i.link.html_safe %> type="button" class="mb-2 flex rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg" style="background-color: <%= i.backgroundColour.html_safe %>">
       <%= i.svg.html_safe %><%=i.platformName%></a>
