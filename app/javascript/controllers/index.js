@@ -7,8 +7,8 @@ import { application } from "./application"
 import FormRedirectController from "./form_redirect_controller"
 application.register("form-redirect", FormRedirectController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import HeaderController from "./header_controller"
+application.register("header", HeaderController)
 
 import NavigationController from "./navigation_controller"
 application.register("navigation", NavigationController)
