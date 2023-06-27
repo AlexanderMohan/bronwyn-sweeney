@@ -3,6 +3,10 @@
 export RAILS_ENV=production
 export RAILS_SERVE_STATIC_FILES=true
 
+echo ""
+echo "Installing Gems for project. This has been taken out of dockerfile to reduce image size"
+bundle
+
 if ! gem list foreman -i --silent; then
   echo "Installing foreman..."
   gem install foreman
@@ -20,6 +24,9 @@ echo "you should create your own master key and setup credentials as "
 echo "specified in config/credentials.yml.dist using the Rails credentials" 
 echo "manager."
 echo ""
+
+echo "Installing NPM Packages, requires Yarn. Check you have NPM/Yarn installed if you run into any errors."
+yarn install
 
 echo "Creating database if it doesn't exist..."
 bundle exec rake db:create
