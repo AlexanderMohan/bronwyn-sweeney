@@ -1,6 +1,6 @@
 FROM ruby:3.1.3-alpine
 # Install dependencies
-RUN apk update && apk add build-base nodejs npm postgresql-dev tzdata
+RUN apk update && apk add build-base nodejs npm postgresql-dev tzdata imagemagick
 RUN npm i -g yarn
 # Setup App
 RUN mkdir /app

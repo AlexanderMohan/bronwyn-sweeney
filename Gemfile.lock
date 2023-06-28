@@ -170,6 +170,7 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mini_magick (4.12.0)
     mini_mime (1.1.2)
     minitest (5.18.1)
     motor-admin (0.4.19)
@@ -226,6 +227,9 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails-webp (0.1.3)
+      mini_magick
+      rails
     rails_real_favicon (0.1.1)
       json (>= 1.7, < 3)
       rails
@@ -343,6 +347,7 @@ DEPENDENCIES
   motor-admin (~> 0.4.19)
   puma (~> 5.0)
   rails (~> 7.0.5)
+  rails-webp (~> 0.1.3)
   rails_real_favicon (~> 0.1.1)
   recaptcha (~> 5.14)
   selenium-webdriver
