@@ -102,3 +102,5 @@ gem "mailersend-ruby", "~> 1.6"
 gem "recaptcha", "~> 5.14"
 
 gem "code-scanning-rubocop", "~> 0.6.1"
+
+gem "rails_real_favicon", "~> 0.1.1", :group => :development

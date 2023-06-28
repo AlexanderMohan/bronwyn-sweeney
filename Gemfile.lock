@@ -226,6 +226,10 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails_real_favicon (0.1.1)
+      json (>= 1.7, < 3)
+      rails
+      rubyzip (~> 2)
     railties (7.0.5.1)
       actionpack (= 7.0.5.1)
       activesupport (= 7.0.5.1)
@@ -339,6 +343,7 @@ DEPENDENCIES
   motor-admin (~> 0.4.19)
   puma (~> 5.0)
   rails (~> 7.0.5)
+  rails_real_favicon (~> 0.1.1)
   recaptcha (~> 5.14)
   selenium-webdriver
   simple_form (~> 5.2)
