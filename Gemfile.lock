@@ -79,7 +79,7 @@ GEM
       request_store (~> 1.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
-    bootsnap (1.16.0)
+    bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
     cancancan (3.5.0)
@@ -179,7 +179,7 @@ GEM
       cancancan (~> 3.0)
       fugit (~> 1.0)
       rails (>= 5.2)
-    msgpack (1.7.0)
+    msgpack (1.7.2)
     net-imap (0.3.7)
       date
       net-protocol
