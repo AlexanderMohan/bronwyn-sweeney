@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: clips
+#
+#  id          :integer          not null, primary key
+#  date        :date             not null
+#  description :string(255)
+#  title       :string(255)      not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  video_id    :string(255)      not null
+#
+# Indexes
+#
+#  index_clips_on_video_id  (video_id) UNIQUE
+#
+
+one:
+  video_id: MyString
+  title: MyString
+  description: MyString
+  date: 2023-11-26
+
+two:
+  video_id: MyString
+  title: MyString
+  description: MyString
+  date: 2023-11-26

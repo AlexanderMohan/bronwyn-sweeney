@@ -1,0 +1,10 @@
+<% # Set Page Title %>
+<% content_for :title do %>Gallery<% end %>
+<%= render "shared/generic_card", content_alias: 'gallery-header', header_image: nil, show_socials: false %>
+<% # Render a custom two-column double width card. Fill it with clips as defined in clips table. %>
+<div class="max-w-2xl md:p-6 p-4 rounded-lg shadow bg-orange-950 md:mb-7 mb-4 bg-opacity-70">
+  <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Clips</h5>
+  <p class="mb-3 font-normal text-neutral-200">
+    <div class="mb-3 font-normal text-neutral-200"></div>
+  </p>
+</div>
