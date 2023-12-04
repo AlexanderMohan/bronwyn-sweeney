@@ -99,7 +99,7 @@ gem "database_validations", "~> 1.1"
 
 gem "mailersend-ruby", "~> 1.6"
 
-gem "recaptcha", "~> 5.14"
+gem "recaptcha", "~> 5.16"
 
 gem "code-scanning-rubocop", "~> 0.6.1"
 
