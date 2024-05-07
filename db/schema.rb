@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_26_144308) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_09_124553) do
   create_table "clips", force: :cascade do |t|
     t.string "video_id", limit: 255, null: false
     t.string "title", limit: 255, null: false
@@ -18,7 +18,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_26_144308) do
     t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["video_id"], name: "index_clips_on_video_id", unique: true
   end
 
   create_table "contacts", force: :cascade do |t|

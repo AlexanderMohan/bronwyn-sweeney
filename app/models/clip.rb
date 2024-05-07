@@ -10,10 +10,6 @@
 #  updated_at  :datetime         not null
 #  video_id    :string(255)      not null
 #
-# Indexes
-#
-#  index_clips_on_video_id  (video_id) UNIQUE
-#
 class Clip < ApplicationRecord
     # Validations
     validates :video_id, presence: true, uniqueness: true
