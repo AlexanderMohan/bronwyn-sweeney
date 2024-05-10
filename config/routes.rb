@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :clips
+  # resources :clips
   resources :contacts, path: 'contact', only: %i[new create]
   authenticate :user do
     mount Motor::Admin => '/admin'
