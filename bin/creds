@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+MAILERSEND_API_TOKEN=null EDITOR="code -w" bin/rails credentials:edit   

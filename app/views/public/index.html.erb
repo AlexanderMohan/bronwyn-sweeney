@@ -2,9 +2,9 @@
 <% # Set Page Title %>
 <% content_for :title do %>Home<% end %>
 <% # Set Page Content %>
-
+<div class="block md:hidden h-[80vh]">
+</div>
 <%= render "shared/generic_card", content_alias: 'homepage', header_image: 'funny_women_awards.png', show_socials:true %>
 <% unless next_event.nil? %>
   <%= render "shared/event", event: next_event %>
 <% end %>
-

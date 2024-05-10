@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 bundle
-
+export MAILERSEND_API_TOKEN=dev
 yarn
 
 if ! gem list foreman -i --silent; then

@@ -9,15 +9,15 @@ module MailersendHelper
     ms_email = Mailersend::Email.new
 
     # Add parameters
-    ms_email.add_recipients('email' => 'me+notify@alexandermohan.com', 'name' => 'AlexanderMohan Test')
-    ms_email.add_from('email' => 'service-notifications@notify.alexandermohan.com',
-                      'name' => 'alexanderMOHAN Service Notifications')
+    ms_email.add_recipients('email' => Rails.application.credentials.mail[:contact_recipient], 'name' => Rails.application.credentials.mail[:contact_recipient_name])
+    ms_email.add_from('email' => Rails.application.credentials.mail[:contact_from],
+                      'name' => Rails.application.credentials.mail[:contact_from_name])
     ms_email.add_subject(subject)
     ms_email.add_template_id('3z0vklonq5e47qrx')
-    ms_email.add_reply_to('email' => 'contact@alexandermohan.com', 'name' => 'alexanderMOHAN Customer Service')
+    ms_email.add_reply_to('email' => Rails.application.credentials.mail[:reply_to], 'name' => Rails.application.credentials.mail[:reply_to_name])
 
     variables = {
-      email: 'me+notify@alexandermohan.com',
+      email: Rails.application.credentials.mail[:contact_recipient],
       substitutions: [
         {
           var: 'notification_body',
